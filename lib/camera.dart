@@ -1,14 +1,14 @@
 // ignore_for_file: avoid_print
 
-import 'dart:async';
+//import 'dart:async';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:newflutterproject/inspection02.dart';
 import 'package:newflutterproject/inspection03.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
+//import 'package:path/path.dart';
+//import 'package:path_provider/path_provider.dart';
 
 late List<CameraDescription> cameras;
 List<File> capturedImages = [];
@@ -22,7 +22,7 @@ void cameraMain() async {
     routes: {
       'inspect02': (context) => const Inspection02(),
       'camera': (context) => const CameraApp(),
-      'inspect03': (context) => const inspect03(),
+      'inspect03': (context) => const Inspect03(),
     },
   ));
 }
@@ -86,7 +86,7 @@ class _CameraAppState extends State<CameraApp> {
               const SizedBox(
                 height: 563,
               ),
-              Container(
+              SizedBox(
                 /* gallery bar */
                 height: barHeight,
                 child: ListView.builder(

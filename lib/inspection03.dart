@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newflutterproject/topBar.dart';
 
-class inspect03 extends StatelessWidget {
-  const inspect03({Key? key}) : super(key: key);
+class Inspect03 extends StatelessWidget {
+  const Inspect03({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
