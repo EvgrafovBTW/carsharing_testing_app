@@ -3,9 +3,11 @@
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:newflutterproject/camera.dart';
 import 'package:newflutterproject/inspection02.dart';
 import 'topBar.dart';
 import 'textList.dart';
+import 'camera.dart';
 
 void main() => runApp(MaterialApp(
       title: 'App',
@@ -13,6 +15,7 @@ void main() => runApp(MaterialApp(
       routes: {
         'app': (context) => const App(),
         'inspect02': (context) => const Inspection02(),
+        //'camera': (context) => const CameraApp(),
       },
       debugShowCheckedModeBanner: false,
     ));

@@ -48,22 +48,6 @@ class TextList extends StatelessWidget {
                   /* разобраться с флексом */
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    /*Icon(
-                        Icons.camera_alt,
-                        color: Color(0xFF00b864),
-                        size: 50,
-                      ),
-                      Expanded(
-                          child: Text(
-                        'Сфотографировать повреждения',
-                        style: TextStyle(
-                          color: Color(0xFF00b864),
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        maxLines: 2,
-                        softWrap: true,
-                      )),*/
                     TextButton(
                         child: Row(
                           children: const [
@@ -97,9 +81,7 @@ class TextList extends StatelessWidget {
             SizedBox(
               height: 130,
               child: Container(
-                decoration: const BoxDecoration(
-                    //color: Color(0xFFf3f3f3),
-                    ),
+                decoration: const BoxDecoration(),
                 child: Row(
                   children: [
                     Column(

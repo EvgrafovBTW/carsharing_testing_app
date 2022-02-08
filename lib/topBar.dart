@@ -16,7 +16,7 @@ class TopBar extends StatefulWidget {
 class _TopBarClock extends State<TopBar> {
   // ignore: unused_field
   late Timer _timer;
-  static int time = 10;
+  static int time = 240;
   var _counter = Duration(seconds: time);
   double progValue = 0;
   bool expired = false;
@@ -35,7 +35,7 @@ class _TopBarClock extends State<TopBar> {
             if (_counter == Duration.zero) {
               expired = true;
               //progValue = 0;
-              textColor = Colors.red;
+              textColor = const Color.fromARGB(255, 240, 49, 35);
               log('таймер дошёл до нуля');
             }
             break;
