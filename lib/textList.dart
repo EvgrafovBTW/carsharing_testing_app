@@ -127,6 +127,9 @@ class TextList extends StatelessWidget {
               ),
             ),
             //const Spacer(flex: 1),
+            const SizedBox(
+              height: 100,
+            ),
             Row(
               children: const [
                 Expanded(
@@ -141,11 +144,79 @@ class TextList extends StatelessWidget {
                 ))
               ],
             ),
-            ElevatedButton(
+            Center(
+              child: MaterialButton(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                color: const Color(0xFF314177),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, 'inspect02');
+                  log('поездка начата');
                 },
-                child: const Text('inspect02'))
+                child: Column(
+                  children: const [
+                    Text(
+                      'Завершить осмотр',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'и начать поездку',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    )
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  side: const BorderSide(
+                    color: Color(0xFF314177),
+                    width: 0.6,
+                  ),
+                ),
+              ),
+            ),
+            Center(
+              child: MaterialButton(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                color: const Color.fromARGB(255, 229, 229, 230),
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, 'inspect03');
+                },
+                child: Column(
+                  children: const [
+                    Text(
+                      'Хочу сообщить',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF314177),
+                      ),
+                    ),
+                    Text(
+                      'о салоне автомобиля',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xFF314177),
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 175,
+                    )
+                  ],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+            ),
           ],
         ),
       ),
