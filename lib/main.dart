@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:newflutterproject/camera.dart';
 import 'package:newflutterproject/inspection02.dart';
+import 'package:newflutterproject/inspection03.dart';
 import 'topBar.dart';
 import 'textList.dart';
 import 'camera.dart';
@@ -15,14 +16,15 @@ void main() => runApp(MaterialApp(
       routes: {
         'app': (context) => const App(),
         'inspect02': (context) => const Inspection02(),
-        //'camera': (context) => const CameraApp(),
+        'camera': (context) => const CameraApp(),
+        'inspect03': (context) => const inspect03(),
       },
       debugShowCheckedModeBanner: false,
     ));
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
-// sample text
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

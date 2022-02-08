@@ -36,6 +36,7 @@ class _TopBarClock extends State<TopBar> {
               expired = true;
               //progValue = 0;
               textColor = const Color.fromARGB(255, 240, 49, 35);
+              barColor = const Color.fromARGB(255, 240, 49, 35);
               log('таймер дошёл до нуля');
             }
             break;
@@ -56,6 +57,7 @@ class _TopBarClock extends State<TopBar> {
   }
 
   Color textColor = Colors.black;
+  Color barColor = Color.fromARGB(255, 185, 183, 183);
 
   @override
   Widget build(BuildContext context) {
@@ -78,35 +80,12 @@ class _TopBarClock extends State<TopBar> {
           ],
         ),
         LinearProgressIndicator(
-          backgroundColor: Colors.grey,
-          color: Colors.purple,
-          minHeight: 5,
+          backgroundColor: Colors.white,
+          color: barColor,
+          minHeight: 2,
           value: progValue,
         ),
       ],
     );
   }
-
-  /*Widget progressBarBuild(BuildContext context) {
-    return ProgressBar();
-  }*/
 }
-/*
-class ProgressBar extends StatefulWidget {
-  @override
-  _ProgressBar createState() => _ProgressBar();
-}
-
-class _ProgressBar extends State<ProgressBar> {
-
-  @override
-  Widget build(BuildContext context) {
-    return LinearProgressIndicator(
-      backgroundColor: Colors.grey,
-      color: Colors.purple,
-      minHeight: 5,
-      value: progValue,
-    );
-  }
-}
-*/

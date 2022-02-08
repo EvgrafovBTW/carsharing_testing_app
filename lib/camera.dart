@@ -1,9 +1,12 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:newflutterproject/inspection02.dart';
+import 'package:newflutterproject/inspection03.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -18,6 +21,8 @@ void cameraMain() async {
     home: const CameraApp(),
     routes: {
       'inspect02': (context) => const Inspection02(),
+      'camera': (context) => const CameraApp(),
+      'inspect03': (context) => const inspect03(),
     },
   ));
 }
@@ -31,6 +36,7 @@ class CameraApp extends StatefulWidget {
 
 class _CameraAppState extends State<CameraApp> {
   late CameraController controller;
+  bool isButtonDisabled = true;
 
   @override
   void initState() {
@@ -59,15 +65,25 @@ class _CameraAppState extends State<CameraApp> {
       return Container();
     }
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Фото повреждений'),
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.arrow_left_rounded))
+        ],
+      ),
       //home: Scaffold(
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: <Widget>[
-          CameraPreview(controller),
+          Center(
+            child: CameraPreview(controller),
+          ),
           Column(
             children: [
               const SizedBox(
-                height: 650,
+                height: 563,
               ),
               Container(
                 /* gallery bar */
@@ -96,10 +112,15 @@ class _CameraAppState extends State<CameraApp> {
                   GestureDetector(
                     /* кнопка снимка */
                     onTap: () async {
-                      var xFile = await controller.takePicture();
-                      setState(() {
-                        capturedImages.add(File(xFile.path));
-                      });
+                      try {
+                        var xFile = await controller.takePicture();
+                        setState(() {
+                          capturedImages.add(File(xFile.path));
+                          isButtonDisabled = false;
+                        });
+                      } catch (e) {
+                        print(e);
+                      }
                     },
                     child: Container(
                       height: 60,
@@ -113,7 +134,9 @@ class _CameraAppState extends State<CameraApp> {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacementNamed(context, 'inspect02');
+                        if (isButtonDisabled == false) {
+                          Navigator.pushReplacementNamed(context, 'inspect02');
+                        }
                       },
                       child: const Text('Готово'))
                   /*Builder(
@@ -149,61 +172,6 @@ class _CameraAppState extends State<CameraApp> {
       ),
     );
   }
-
-  /*Widget _buildGalleryBar() {
-    const barHeight = 90.0;
-    const vertPadding = 10.0;
-
-    return Container(
-      height: barHeight,
-      child: ListView.builder(
-          padding: const EdgeInsets.symmetric(vertical: vertPadding),
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int i) {
-            return Container(
-              padding: const EdgeInsets.only(right: 5.0),
-              width: 70.0,
-              height: barHeight - vertPadding * 2,
-              child: Image(
-                image: FileImage(capturedImages[i]),
-                fit: BoxFit.cover,
-              ),
-            );
-          }),
-    );
-  }*/
-
-  /*Widget _buildControlBar() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        IconButton(
-          /* вспышка */
-          color: Colors.white,
-          icon: const Icon(Icons.flash_auto),
-          onPressed: () {},
-        ),
-        GestureDetector(
-          /* кнопка снимка */
-          onTap: () async {
-            var xFile = await controller.takePicture();
-            setState(() {
-              capturedImages.add(File(xFile.path));
-            });
-          },
-          child: Container(
-            height: 80.0,
-            width: 80.0,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        /* тут должна быть кнопка "ГОТОВО" */
-      ],
-    );
-  }*/
 }
 
 class GalleryScreen extends StatelessWidget {

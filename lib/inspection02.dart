@@ -58,7 +58,7 @@ class Inspection02 extends StatelessWidget {
                 onPressed: () {
                   cameraMain();
                   log('pressed');
-                  //Navigator.pushNamed(context, 'camera');
+                  Navigator.pushNamed(context, 'camera');
                 },
                 child: const Icon(Icons.drive_eta)),
             const SizedBox(
@@ -69,6 +69,7 @@ class Inspection02 extends StatelessWidget {
               color: const Color(0xFF314177),
               onPressed: () {
                 log('открыты');
+                Navigator.pushReplacementNamed(context, 'inspect03');
               },
               child: Column(
                 children: const [
