@@ -57,7 +57,7 @@ class _TopBarClock extends State<TopBar> {
   }
 
   Color textColor = Colors.black;
-  Color barColor = Color.fromARGB(255, 185, 183, 183);
+  Color barColor = const Color.fromARGB(255, 185, 183, 183);
 
   @override
   Widget build(BuildContext context) {
