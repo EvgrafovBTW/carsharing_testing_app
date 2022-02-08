@@ -72,6 +72,7 @@ class _CameraAppState extends State<CameraApp> {
               onPressed: () => Navigator.pop(context),
               icon: const Icon(Icons.arrow_left_rounded))
         ],
+        backgroundColor: const Color.fromARGB(255, 75, 73, 73),
       ),
       //home: Scaffold(
       body: Stack(
