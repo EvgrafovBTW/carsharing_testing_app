@@ -2,16 +2,25 @@
 
 (A very small portion of it, wihich i replicated as a part of my probation period at Cars7)
 
-## Getting Started
+## App overwiev
+- Main page (of the app described as my assigment)                                    
+
 ![image](screenshots/mainPage.jpg)
 
-This project is a starting point for a Flutter application.
+> The point of interest here is the button with the green text and a camera icon of the same color.
+> Once user taps it, they are transfered to the camera where they can take pictures.
 
-A few resources to get you started if this is your first Flutter project:
+- Camera                                                            
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![image](screenshots/emptyCamera.jpg)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> There it is! The camera! 
+>> The photos are taken by tapping that round grey button at the bottom 
+
+- Camera, but fancier
+
+![image](screenshots/loadedCamera.jpg)
+
+> Upon taking some photos, the **scrollable gallery bar** appears! 
+>> Take more photos than your device's screen can fit and photo thumbnails will go out of bounds.
+>> Which is quite handy, including that you can scroll **gallery bar** on the x axis.
