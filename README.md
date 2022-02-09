@@ -38,7 +38,7 @@ That's pretty much it about functionality
 
 ## Please note
 This app is far from what it intended to be. 
-It would be a joy if this code helps somebody, altough theres is just CameraController which is working as intended. And my be some styles! 
+It would be a joy if this code helps somebody, altough theres is just CameraController which is working as intended. And maybe some styles! 
 
 ## README inside of a readme
 If you here for the **Timer**, i suggest you search for other solution, because this timer **DOES NOT** keep it's *state* between pages.
