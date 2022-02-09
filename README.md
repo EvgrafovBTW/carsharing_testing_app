@@ -3,6 +3,7 @@
 (A very small portion of it, wihich i replicated as a part of my probation period at Cars7)
 
 ## Getting Started
+![image](screenshots/mainPage.jpg)
 
 This project is a starting point for a Flutter application.
 
