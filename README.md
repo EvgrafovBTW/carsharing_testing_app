@@ -1,4 +1,4 @@
-# Cars7 app front-end 
+# Cars7 part of an app front-end request
 
 (A very small portion of it, wihich i replicated as a part of my probation period at Cars7)
 
@@ -41,7 +41,7 @@ This app is far from what it intended to be.
 It would be a joy if this code helps somebody, altough theres is just CameraController which is working as intended. And my be some styles! 
 
 ## README inside of a readme
-If you here for the **Timer**, i suggest you search for other solution, because this timer **DOES NOT** keep it's *state* between changes.
+If you here for the **Timer**, i suggest you search for other solution, because this timer **DOES NOT** keep it's *state* between pages.
 and I dont have time nor knowledge to fix it. Also i would appretiate anything that smells like a solution to this matter.
 
 Other than that, timer countdow is the solid piece and working as it supposed to. 
