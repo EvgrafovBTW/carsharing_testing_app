@@ -32,7 +32,7 @@ Also you can see blue button next to the grey one. This button submits photos us
 
 > Here you can see familiar **gallery bar**, which is so familiar because it is quite literally been pasted here from the previous screen.
 > So it operates just the same.
->> Altough a blue button right bellow **gallery bar** upon clicking it will navigate user to the *camera* so they can add ore photos to the collection.
+>> Altough a blue button right bellow **gallery bar** upon clicking it will navigate user to the *camera* so they can add more photos to the collection.
 
 That's pretty much it about functionality
 
