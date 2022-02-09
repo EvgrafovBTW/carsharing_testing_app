@@ -1,6 +1,6 @@
-# newflutterproject
+# Cars7 app front-end 
 
-A new Flutter project.
+(A very small portion of it, wihich i replicated as a part of my probation period at Cars7)
 
 ## Getting Started
 
